@@ -6,10 +6,7 @@ import "./style.scss"
 
 export default function MainLayout() {
   return (
-    <div
-      style={{ height: "100vh", display: "flex", flexDirection: "column" }}
-      className="main-layout"
-    >
+    <div className="main-layout">
       <div style={{ background: "#ace0ff" }}>
         <SafeArea position="top" />
       </div>

@@ -3,8 +3,7 @@ import Home from "../pages/home"
 import About from "../pages/about"
 import History from "../pages/history"
 import Profile from "../pages/profile"
-
-import MainLayout from "../layout/MainLayout"
+import MainLayout from "pages/layout"
 
 export const appRoutes = [
   {
