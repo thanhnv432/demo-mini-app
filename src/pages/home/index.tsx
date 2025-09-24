@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { TextArea, Card, Space } from "antd-mobile";
-import Button from "components/button";
 import { useCounterStore } from "store";
+import { EyeOutline } from "antd-mobile-icons";
+import { useNavigate } from "react-router-dom";
+import Button from "components/button";
 import ModalComp from "components/modal";
 import { get } from "utils/axios";
 
@@ -9,6 +11,7 @@ export default function Home() {
   const [value, setValue] = useState("");
   const { count, increase, decrease } = useCounterStore();
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,7 +73,19 @@ export default function Home() {
 
       <div>
         <h2>User list</h2>
-        {users && users?.map((user: any) => <p>{user?.name}</p>)}
+        {users &&
+          users?.map((user: any) => (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <p>{user?.name}</p>
+              <EyeOutline onClick={() => navigate(`/profile/${user?.id}`)} />
+            </div>
+          ))}
       </div>
     </div>
   );
