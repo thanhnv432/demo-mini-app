@@ -10,7 +10,7 @@ import { get } from "utils/axios";
 export default function Home() {
   const [value, setValue] = useState("");
   const { count, increase, decrease } = useCounterStore();
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<any>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -72,18 +72,12 @@ export default function Home() {
       </div>
 
       <div>
-        <h2>User list</h2>
+        <h2 className="text-body-jp-lg">User list</h2>
         {users &&
           users?.map((user: any) => (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
+            <div>
               <p>{user?.name}</p>
-              <EyeOutline onClick={() => navigate(`/profile/${user?.id}`)} />
+              <EyeOutline onClick={() => navigate(`/users/${users?.id}`)} />
             </div>
           ))}
       </div>

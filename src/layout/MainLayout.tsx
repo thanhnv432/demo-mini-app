@@ -2,17 +2,21 @@ import { SafeArea } from "antd-mobile"
 import FooterComp from "components/footer"
 import Header from "components/header"
 import { Outlet } from "react-router-dom"
+import "./style.scss"
 
 export default function MainLayout() {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div
+      style={{ height: "100vh", display: "flex", flexDirection: "column" }}
+      className="main-layout"
+    >
       <div style={{ background: "#ace0ff" }}>
         <SafeArea position="top" />
       </div>
       <Header />
 
       {/* Content */}
-      <div style={{ flex: 1, padding: 16 }}>
+      <div className="main-content" style={{ flex: 1, padding: 16 }}>
         <Outlet />
       </div>
 
