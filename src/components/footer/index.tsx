@@ -1,20 +1,25 @@
 import { Footer } from "antd-mobile"
+import "./style.css"
 
 export default function FooterComp() {
   return (
     <Footer
       links={[
         {
-          text: "Footer",
-          href: "https://www.aliyun.com/",
+          text: "Home",
+          href: "/",
         },
         {
-          text: "Footer 1",
-          href: "https://www.aliyun.com/",
+          text: "History",
+          href: "/history",
         },
         {
-          text: "Footer 2",
-          href: "https://www.aliyun.com/",
+          text: "About",
+          href: "/about",
+        },
+        {
+          text: "Profile",
+          href: "/profile",
         },
       ]}
     ></Footer>
