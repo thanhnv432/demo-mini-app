@@ -30,16 +30,6 @@ export default function Home() {
 
   return (
     <div className="home" style={{ marginInline: 50 }}>
-      <Card title="Text Here">
-        <TextArea
-          value={value}
-          onChange={setValue}
-          showCount
-          maxLength={100}
-          placeholder="Enter your content..."
-        />
-      </Card>
-
       <Space direction="vertical" style={{ "--gap": "24px", marginBottom: "24px" }}>
         <Button
           size="middle"
