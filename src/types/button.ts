@@ -1,7 +1,9 @@
+import { ButtonColor, ButtonShape, ButtonSize } from "constants/constants"
+
 export type ButtonType = {
   onClick: () => void
-  size: "mini" | "small" | "middle" | "large"
-  color: "primary" | "success" | "danger" | "warning"
-  fill: "none" | "solid" | "outline"
+  size: ButtonSize
+  color: ButtonColor
+  fill: ButtonShape
   text: string
 }

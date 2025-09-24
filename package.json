@@ -44,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "repository": "git@gitlab.alibaba-inc.com:superapp-fe-templates/create-mini-app-scoffolds.git"
+  "repository": "git@gitlab.alibaba-inc.com:superapp-fe-templates/create-mini-app-scoffolds.git",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
 }
