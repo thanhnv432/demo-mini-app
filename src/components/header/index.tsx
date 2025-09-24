@@ -2,6 +2,7 @@ import { Avatar, Badge, NavBar, Popover, Space, Toast } from "antd-mobile"
 import { useLocation, useNavigate } from "react-router-dom"
 import { LeftOutline, MoreOutline, AppOutline } from "antd-mobile-icons"
 import { titleMap } from "routes/routes"
+import "./style.scss"
 
 export default function Header() {
   const { pathname } = useLocation()
@@ -17,20 +18,12 @@ export default function Header() {
 
   return (
     <NavBar
-      backIcon={isHome ? null : <LeftOutline />}
+      className="header"
+      backIcon={isHome ? null : <LeftOutline className="icon" />}
       onBack={() => navigate(-1)}
-      left={
-        <Space align="center">
-          <AppOutline />
-          {!isHome && <span style={{ fontSize: 12 }}>Menu</span>}
-        </Space>
-      }
+      left={<span className="title">{title}</span>}
       right={
         <Space style={{ "--gap": "14px", alignItems: "center" }}>
-          <Badge content=" " color="var(--adm-color-primary)">
-            <Avatar src="https://placehold.co/15x15" />
-          </Badge>
-
           {!isHome && (
             <Popover.Menu
               actions={actions}
@@ -48,8 +41,6 @@ export default function Header() {
       style={{
         borderBottom: "1px solid red",
       }}
-    >
-      {title}
-    </NavBar>
+    ></NavBar>
   )
 }

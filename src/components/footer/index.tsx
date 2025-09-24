@@ -1,17 +1,17 @@
-import { Badge, TabBar } from "antd-mobile";
+import { Badge, TabBar } from "antd-mobile"
 import {
   AppOutline,
   MessageOutline,
   MessageFill,
   UnorderedListOutline,
   UserOutline,
-} from "antd-mobile-icons";
-import "./style.scss";
-import { useLocation, useNavigate } from "react-router-dom";
+} from "antd-mobile-icons"
+import "./style.scss"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export default function FooterComp() {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
 
   const tabs = [
     {
@@ -29,27 +29,16 @@ export default function FooterComp() {
     {
       key: "/about",
       title: "About",
-      icon: (active: boolean) =>
-        active ? <MessageFill /> : <MessageOutline />,
+      icon: (active: boolean) => (active ? <MessageFill /> : <MessageOutline />),
       badge: "99+",
     },
-    {
-      key: "/profile",
-      title: "Profile",
-      icon: <UserOutline />,
-    },
-  ];
+  ]
 
   return (
     <TabBar activeKey={pathname} onChange={(value) => navigate(value)}>
       {tabs.map((item) => (
-        <TabBar.Item
-          key={item.key}
-          icon={item.icon}
-          title={item.title}
-          badge={item.badge}
-        />
+        <TabBar.Item key={item.key} icon={item.icon} title={item.title} badge={item.badge} />
       ))}
     </TabBar>
-  );
+  )
 }

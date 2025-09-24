@@ -1,0 +1,36 @@
+@import 'styles/variables/colors';
+
+.header {
+  padding: 4px 24px 28px 24px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  background-color: $red;
+  color: $white;
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .adm-nav-bar-left {
+    display: flex;
+    align-items: center;
+
+    .adm-nav-bar-back {
+      padding: unset;
+      margin-right: 12px;
+
+      .adm-nav-bar-back-arrow {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+}
