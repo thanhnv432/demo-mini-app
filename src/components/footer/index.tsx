@@ -1,13 +1,12 @@
 import { Badge, TabBar } from "antd-mobile"
 import {
   AppOutline,
-  MessageOutline,
   MessageFill,
-  UnorderedListOutline,
-  UserOutline,
+  MessageOutline,
+  UnorderedListOutline
 } from "antd-mobile-icons"
-import "./style.scss"
 import { useLocation, useNavigate } from "react-router-dom"
+import "./style.scss"
 
 export default function FooterComp() {
   const navigate = useNavigate()

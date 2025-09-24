@@ -1,6 +1,6 @@
-import { Avatar, Badge, NavBar, Popover, Space, Toast } from "antd-mobile"
+import { NavBar, Popover, Space, Toast } from "antd-mobile"
+import { LeftOutline, MoreOutline } from "antd-mobile-icons"
 import { useLocation, useNavigate } from "react-router-dom"
-import { LeftOutline, MoreOutline, AppOutline } from "antd-mobile-icons"
 import { titleMap } from "routes/routes"
 import "./style.scss"
 
