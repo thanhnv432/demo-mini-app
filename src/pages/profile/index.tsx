@@ -10,7 +10,6 @@ export default function Profile() {
     const fetchData = async () => {
       try {
         const response = await get({ url: `/users/${id}` });
-        console.log("🚀 ~ fetchData ~ response:", response);
         if (response?.status === 200) {
           setUserInfo(response?.data);
         }

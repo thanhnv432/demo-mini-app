@@ -17,6 +17,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await get({ url: "/users" });
+        console.log("🚀 ~ fetchData ~ response:", response);
         if (response?.status === 200) {
           setUsers(response?.data);
         }
@@ -75,9 +76,16 @@ export default function Home() {
         <h2 className="text-body-jp-lg">User list</h2>
         {users &&
           users?.map((user: any) => (
-            <div>
+            <div
+              key={user?.id}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
               <p>{user?.name}</p>
-              <EyeOutline onClick={() => navigate(`/users/${users?.id}`)} />
+              <EyeOutline onClick={() => navigate(`/profile/${user?.id}`)} />
             </div>
           ))}
       </div>
