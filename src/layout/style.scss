@@ -1,0 +1,11 @@
+.main-layout {
+  height: "100vh";
+  display: "flex";
+  flex-direction: "column";
+
+  .main-content {
+    max-height: calc(100vh - 50px - 50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
