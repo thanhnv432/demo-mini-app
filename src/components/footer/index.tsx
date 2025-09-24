@@ -6,7 +6,7 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from "antd-mobile-icons"
-import "./style.css"
+import "./style.scss"
 import { useLocation, useNavigate } from "react-router-dom"
 
 export default function FooterComp() {
